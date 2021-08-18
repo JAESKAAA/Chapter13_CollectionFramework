@@ -1,21 +1,25 @@
 package ch13_1_collections;
 
-import java.util.Arrays;
-
 import com.libs.collection.MyIntList;
+import com.libs.collection.MyList;
+import com.libs.collection.MySmartList;
+
+/********커스텀 라이브러리 만들기*********
+ * 1.add 기능 구현(완료)
+ * 2.get 기능 구현 (완료)
+ * 3.size 기능 구현 (완료)
+ * 4.ArrayIndexOutOfBoundsException 해결_자동으로 배열길이 늘려주는 기능 (완료)
+ * 5.remove 기능 구현 (완료)
+ * 6.배열 초기화_일괄삭제기능 (완료)
+ * 
+ */
 
 public class MyCollectionTest2 {
 
 	public static void main(String[] args) {
-		/********커스텀 라이브러리 만들기*********
-		 * 1.add 기능 구현(완료)
-		 * 2.get 기능 구현 (완료)
-		 * 3.size 기능 구현 (완료)
-		 * 4.ArrayIndexOutOfBoundsException 해결_자동으로 배열길이 늘려주는 기능 (완료)
-		 * 5.remove 기능 구현 (완료)
-		 * 6.배열 초기화_일괄삭제기능 (완료)
-		 * 
-		 */
+		
+		MyList mlist = new MySmartList();
+		
 		
 		MyIntList list = new MyIntList(3);
 		list.add(1);
@@ -34,7 +38,7 @@ public class MyCollectionTest2 {
 		System.out.println(list);
 		System.out.println("list[1]의 값: "+list.get(1));
 		System.out.println("size :"+ list.size());
-		list.removeAll();
+		list.clear();
 		System.out.println(list);
 		System.out.println("==================================");
 	}
